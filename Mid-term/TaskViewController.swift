@@ -14,6 +14,7 @@ class TaskViewController: UIViewController {
     @IBOutlet weak var taskImage: UIImageView!
     
     
+    @IBOutlet weak var taskDescription: UITextView!
     @IBOutlet weak var taskTitle: UILabel!
     
     @IBOutlet weak var taskDue: UILabel!
@@ -22,6 +23,7 @@ class TaskViewController: UIViewController {
     var satus = ""
     var titletask = ""
     var due = ""
+    var taskDesc = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +31,7 @@ class TaskViewController: UIViewController {
         taskDue.text = due
         taskTitle.text = titletask
         taskImage.image = image
+        taskDescription.text = taskDesc
         // Do any additional setup after loading the view.
     }
 }

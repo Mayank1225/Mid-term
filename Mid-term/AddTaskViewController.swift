@@ -31,6 +31,7 @@ class AddTaskViewController: UIViewController {
         ImageChoose.setImage(selectedIcon, for: .normal)
     }
     
+    
     @objc func dateChange(datePicker: UIDatePicker) {
         dateAndTime.text = formateDate(date: datePicker.date)
     }
@@ -103,6 +104,8 @@ class AddTaskViewController: UIViewController {
             let newTask = Todo(icon: selectedIcon!, title: taskTitle.text!, dueTime: dateAndTime.text!, status: "Pending", description: taskDescription.text!)
             
             data.insert(newTask, at: 0)
+            
+            dateAndTime.resignFirstResponder() // Hide date picker
             
             let successAlert = UIAlertController(title: "Success", message: "Task successfully created.", preferredStyle: .alert)
             successAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
