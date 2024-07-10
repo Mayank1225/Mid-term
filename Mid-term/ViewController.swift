@@ -51,6 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete {
             tableView.beginUpdates()
             ToDodata.remove(at: indexPath.row)
+            data = ToDodata
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
