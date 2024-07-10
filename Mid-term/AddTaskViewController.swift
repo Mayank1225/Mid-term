@@ -104,8 +104,8 @@ class AddTaskViewController: UIViewController {
             let newTask = Todo(icon: selectedIcon!, title: taskTitle.text!, dueTime: dateAndTime.text!, status: "Pending", description: taskDescription.text!)
             
             data.insert(newTask, at: 0)
-            
-            dateAndTime.resignFirstResponder() // Hide date picker
+            ToDodata = data
+            dateAndTime.resignFirstResponder()
             
             let successAlert = UIAlertController(title: "Success", message: "Task successfully created.", preferredStyle: .alert)
             successAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in

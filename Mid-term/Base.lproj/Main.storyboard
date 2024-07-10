@@ -346,15 +346,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aqx-0b-9fK">
-                                <rect key="frame" x="361" y="79" width="51" height="31"/>
-                                <color key="onTintColor" name="secondaryColor"/>
-                                <connections>
-                                    <action selector="onSwitchChange:" destination="V60-Pc-PDl" eventType="valueChanged" id="zQE-sE-Vf5"/>
-                                </connections>
-                            </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9MM-eo-fis">
-                                <rect key="frame" x="0.0" y="431" width="430" height="418"/>
+                                <rect key="frame" x="0.0" y="382" width="430" height="467"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TaskCellfilter" rowHeight="78" id="h6b-qz-7x1" customClass="TaskFilterCellTableViewCell" customModule="Mid_term" customModuleProvider="target">
@@ -475,18 +468,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7WY-4B-mrY" firstAttribute="top" secondItem="A4Y-qo-5kd" secondAttribute="bottom" constant="15" id="1hN-t1-aBf"/>
-                            <constraint firstItem="9MM-eo-fis" firstAttribute="top" secondItem="7WY-4B-mrY" secondAttribute="bottom" constant="59" id="BaP-ZC-uP8"/>
-                            <constraint firstItem="mzo-r2-25E" firstAttribute="trailing" secondItem="aqx-0b-9fK" secondAttribute="trailing" constant="20" id="Cms-FA-MMv"/>
                             <constraint firstItem="mzo-r2-25E" firstAttribute="trailing" secondItem="7WY-4B-mrY" secondAttribute="trailing" constant="20" id="DB5-KP-DeV"/>
                             <constraint firstItem="9MM-eo-fis" firstAttribute="bottom" secondItem="mzo-r2-25E" secondAttribute="bottom" id="E0f-5a-hJp"/>
                             <constraint firstItem="iju-bD-44z" firstAttribute="leading" secondItem="mzo-r2-25E" secondAttribute="leading" constant="20" id="HZk-nS-bnF"/>
+                            <constraint firstItem="9MM-eo-fis" firstAttribute="top" secondItem="7WY-4B-mrY" secondAttribute="bottom" constant="10" id="Hkq-oL-AoO"/>
                             <constraint firstItem="ktD-cG-qyP" firstAttribute="top" secondItem="iwz-Uv-IQU" secondAttribute="bottom" constant="30" id="IPT-21-E3a"/>
                             <constraint firstItem="ktD-cG-qyP" firstAttribute="leading" secondItem="mzo-r2-25E" secondAttribute="leading" constant="30" id="Ozj-b6-F8s"/>
                             <constraint firstItem="9MM-eo-fis" firstAttribute="trailing" secondItem="mzo-r2-25E" secondAttribute="trailing" id="QB1-Fq-nrE"/>
                             <constraint firstItem="iju-bD-44z" firstAttribute="top" secondItem="mzo-r2-25E" secondAttribute="top" constant="60" id="REd-ld-2qj"/>
                             <constraint firstItem="iwz-Uv-IQU" firstAttribute="leading" secondItem="mzo-r2-25E" secondAttribute="leading" constant="30" id="RM8-3D-ZGN"/>
                             <constraint firstItem="iwz-Uv-IQU" firstAttribute="top" secondItem="iju-bD-44z" secondAttribute="bottom" constant="30" id="Tpg-jV-AZO"/>
-                            <constraint firstItem="aqx-0b-9fK" firstAttribute="top" secondItem="mzo-r2-25E" secondAttribute="top" constant="20" id="Xan-Bm-Sba"/>
                             <constraint firstItem="9MM-eo-fis" firstAttribute="leading" secondItem="mzo-r2-25E" secondAttribute="leading" id="bsa-tm-EQw"/>
                             <constraint firstItem="HpW-I5-cFv" firstAttribute="leading" secondItem="iwz-Uv-IQU" secondAttribute="trailing" constant="40" id="cax-Mn-Qxg"/>
                             <constraint firstItem="7WY-4B-mrY" firstAttribute="leading" secondItem="mzo-r2-25E" secondAttribute="leading" constant="20" id="eU1-NL-oji"/>
@@ -503,7 +494,6 @@
                         <outlet property="asceSwitch" destination="HpW-I5-cFv" id="tDk-5C-AvC"/>
                         <outlet property="descSwitch" destination="60u-1u-wRx" id="V7k-1f-vsP"/>
                         <outlet property="filterSegment" destination="7WY-4B-mrY" id="XQ5-j9-3JW"/>
-                        <outlet property="switchForTask" destination="aqx-0b-9fK" id="SBp-Eq-Dc5"/>
                         <outlet property="table" destination="9MM-eo-fis" id="Dqe-cN-Qd6"/>
                     </connections>
                 </viewController>

@@ -19,11 +19,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return ToDodata.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let row = data[indexPath.row]
+        let row = ToDodata[indexPath.row]
         let cell = table.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! AllTaskTableViewCell
         cell.taskTitle.text = row.title
         cell.ImageIcon.image = row.icon
@@ -34,11 +34,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(identifier: "TaskViewController") as? TaskViewController {
-            vc.satus = "Task \(data[indexPath.row].status)"
-            vc.due = "Due at: \(data[indexPath.row].dueTime)"
-            vc.titletask = "Task: \(data[indexPath.row].title)"
-            vc.image = data[indexPath.row].icon
-            vc.taskDesc = data[indexPath.row].description
+            vc.satus = "Task \(ToDodata[indexPath.row].status)"
+            vc.due = "Due at: \(ToDodata[indexPath.row].dueTime)"
+            vc.titletask = "Task: \(ToDodata[indexPath.row].title)"
+            vc.image = ToDodata[indexPath.row].icon
+            vc.taskDesc = ToDodata[indexPath.row].description
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
-            data.remove(at: indexPath.row)
+            ToDodata.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
         }
